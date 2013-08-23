@@ -53,33 +53,40 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 11;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.row) {
-		case 0: {
+		case ItemTypeResonator: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LevelsItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"resonator.png"];
 			cell.itemTitleLabel.text = @"Resonator";
 			cell.itemType = ItemTypeResonator;
 			return cell;
 		}
-		case 1: {
+		case ItemTypeXMP: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LevelsItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"xmp.png"];
 			cell.itemTitleLabel.text = @"XMP Burster";
 			cell.itemType = ItemTypeXMP;
 			return cell;
 		}
-		case 2: {
+		case ItemTypeUltraStrike: {
+			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LevelsItemCell" forIndexPath:indexPath];
+			cell.itemImageView.image = [UIImage imageNamed:@"ultraStrike.png"];
+			cell.itemTitleLabel.text = @"Ultra Strike";
+			cell.itemType = ItemTypeUltraStrike;
+			return cell;
+		}
+		case ItemTypePowerCube: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LevelsItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"powerCube.png"];
 			cell.itemTitleLabel.text = @"Power Cube";
 			cell.itemType = ItemTypePowerCube;
 			return cell;
 		}
-		case 3: {
+		case ItemTypeFlipCard: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SingleItemCell" forIndexPath:indexPath];
 			Player *player = [[API sharedInstance] playerForContext:[NSManagedObjectContext MR_contextForCurrentThread]];
 			if ([player.team isEqualToString:@"ALIENS"]) {
@@ -91,42 +98,42 @@
 			cell.itemType = ItemTypeFlipCard;
 			return cell;
 		}
-		case 4: {
+		case ItemTypePortalShield: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RarityItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"shield.png"];
 			cell.itemTitleLabel.text = @"Shield";
 			cell.itemType = ItemTypePortalShield;
 			return cell;
 		}
-		case 5: {
+		case ItemTypeLinkAmp: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RarityItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"link_amp.png"];
 			cell.itemTitleLabel.text = @"Link Amp";
 			cell.itemType = ItemTypeLinkAmp;
 			return cell;
 		}
-		case 6: {
+		case ItemTypeForceAmp: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RarityItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"force_amp.png"];
 			cell.itemTitleLabel.text = @"Force Amp";
 			cell.itemType = ItemTypeForceAmp;
 			return cell;
 		}
-		case 7: {
+		case ItemTypeHeatsink: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RarityItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"heatsink.png"];
 			cell.itemTitleLabel.text = @"Heatsink";
 			cell.itemType = ItemTypeHeatsink;
 			return cell;
 		}
-		case 8: {
+		case ItemTypeMultihack: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RarityItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"multihack.png"];
 			cell.itemTitleLabel.text = @"Multi-hack";
 			cell.itemType = ItemTypeMultihack;
 			return cell;
 		}
-		case 9: {
+		case ItemTypeTurret: {
 			ResourceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RarityItemCell" forIndexPath:indexPath];
 			cell.itemImageView.image = [UIImage imageNamed:@"turret.png"];
 			cell.itemTitleLabel.text = @"Turret";

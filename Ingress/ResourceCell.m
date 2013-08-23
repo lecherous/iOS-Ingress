@@ -47,6 +47,9 @@
 		case ItemTypeXMP:
 			objectClass = [XMP class];
 			break;
+		case ItemTypeUltraStrike:
+			objectClass = [UltraStrike class];
+			break;
 		case ItemTypePortalShield:
 			objectClass = [Shield class];
 			break;
@@ -123,6 +126,9 @@
 			break;
 		case ItemTypeXMP:
 			objectClass = [XMP class];
+			break;
+		case ItemTypeUltraStrike:
+			objectClass = [UltraStrike class];
 			break;
 		case ItemTypePortalShield:
 			objectClass = [Shield class];
@@ -242,6 +248,9 @@
 			break;
 		case ItemTypeXMP:
 			objectClass = [XMP class];
+			break;
+		case ItemTypeUltraStrike:
+			objectClass = [UltraStrike class];
 			break;
 		case ItemTypePortalShield:
 			objectClass = [Shield class];

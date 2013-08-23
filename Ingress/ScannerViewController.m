@@ -391,21 +391,28 @@
 			
 			if (addedPortals == 0) {
 				[[API sharedInstance] findNearbyPortalsWithCompletionHandler:^(NSArray *portals) {
-					if ([nearbyPortalView.portalGUID isEqualToString:portals[0][@"guid"]]) {
-						[nearbyPortalView updateInformation];
+					if (portals.count > 0) {
+						if ([nearbyPortalView.portalGUID isEqualToString:portals[0][@"guid"]]) {
+							[nearbyPortalView updateInformation];
+						} else {
+							if( nearbyPortalView ) {
+								[nearbyPortalView removeFromSuperview];
+								nearbyPortalView = nil;
+							}
+							
+							nearbyPortalView = [[NearbyPortalView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height-140, 280, 80) portal:portals[0]];
+							nearbyPortalView.alpha = 0;
+							[self.view insertSubview:nearbyPortalView belowSubview:commVC.view];
+							
+							[UIView animateWithDuration:0.15 animations:^{
+								nearbyPortalView.alpha = 1;
+							}];
+						}
 					} else {
-						if( nearbyPortalView ) {
+						if (nearbyPortalView) {
 							[nearbyPortalView removeFromSuperview];
 							nearbyPortalView = nil;
 						}
-					
-						nearbyPortalView = [[NearbyPortalView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height-140, 280, 80) portal:portals[0]];
-						nearbyPortalView.alpha = 0;
-						[self.view insertSubview:nearbyPortalView belowSubview:commVC.view];
-		
-						[UIView animateWithDuration:0.15 animations:^{
-							nearbyPortalView.alpha = 1;
-						}];
 					}
 				}];
 			} else if( nearbyPortalView ) {

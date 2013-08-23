@@ -13,7 +13,8 @@ Requirements
 Download
 --------
 
-- 1.1.2 (07/09/2013)
+- 1.1.3 (07/19/2013)
+- **Change your iPhone's date to 07/15 before installing and after change it back**
 - [Download ipa](http://www.ios-ingress.com/downloads/Ingress.ipa)
 - [Install app via OTA](http://tinyurl.com/iosingressota) (visit this link from Safari on your iDevice)
 - Availabile at Cydia repo http://cydia.angelxwind.net/

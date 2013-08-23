@@ -292,8 +292,8 @@
                                 [sounds addObject:@"SPEECH_SHIELD"];
                             }
                         } else if ([item isKindOfClass:[LinkAmp class]]) {
-                            if (![sounds containsObject:@"SPEECH_FORCE_AMP"]) {
-                                [sounds addObject:@"SPEECH_FORCE_AMP"];
+                            if (![sounds containsObject:@"SPEECH_LINKAMP"]) {
+                                [sounds addObject:@"SPEECH_LINKAMP"];
                             }
                         } else if ([item isKindOfClass:[ForceAmp class]]) {
                             if (![sounds containsObject:@"SPEECH_FORCE_AMP"]) {

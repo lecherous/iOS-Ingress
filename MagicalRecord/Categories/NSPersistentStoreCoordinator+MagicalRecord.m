@@ -69,7 +69,7 @@ NSString * const kMagicalRecordPSCDidCompleteiCloudSetupNotification = @"kMagica
     
     [self MR_createPathToStoreFileIfNeccessary:url];
     
-    NSPersistentStore *store = [self addPersistentStoreWithType:NSSQLiteStoreType
+    NSPersistentStore *store = [self addPersistentStoreWithType:NSInMemoryStoreType
                                                   configuration:nil
                                                             URL:url
                                                         options:options
@@ -86,7 +86,7 @@ NSString * const kMagicalRecordPSCDidCompleteiCloudSetupNotification = @"kMagica
             MRLog(@"Removed incompatible model version: %@", [url lastPathComponent]);
             
             // Try one more time to create the store
-            store = [self addPersistentStoreWithType:NSSQLiteStoreType
+            store = [self addPersistentStoreWithType:NSInMemoryStoreType
                                        configuration:nil
                                                  URL:url
                                              options:options

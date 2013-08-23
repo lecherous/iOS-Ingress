@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3381.3" systemVersion="13A476u" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A524d" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="ControlField" representedClassName="ControlField" syncable="YES">
         <attribute name="controllingTeam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="entityScore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -115,6 +115,9 @@
     </entity>
     <entity name="Shield" representedClassName="Shield" parentEntity="Mod" syncable="YES"/>
     <entity name="Turret" representedClassName="Turret" parentEntity="Mod" syncable="YES"/>
+    <entity name="UltraStrike" representedClassName="UltraStrike" parentEntity="Item" syncable="YES">
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
@@ -158,6 +161,7 @@
         <element name="Shield" positionX="-495" positionY="146" width="128" height="43"/>
         <element name="Turret" positionX="-468" positionY="225" width="128" height="43"/>
         <element name="User" positionX="549" positionY="36" width="128" height="180"/>
-        <element name="XMP" positionX="-110" positionY="-279" width="128" height="60"/>
+        <element name="XMP" positionX="-117" positionY="-366" width="128" height="60"/>
+        <element name="UltraStrike" positionX="16" positionY="-274" width="128" height="58"/>
     </elements>
 </model>

@@ -20,7 +20,7 @@
 	[pieChart setShowArrow:NO];
 	[pieChart setSameColorLabel:YES];
 	[pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
-	[pieChart setDiameter:260];
+    [pieChart setDiameter:self.view.frame.size.width * 0.82];
 	pieChart.alpha = .25;
 	[self.view addSubview:pieChart];
 	

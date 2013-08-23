@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CommTableViewController.h"
 #import "TTSlidingPagesDataSource.h"
+#import "PullableView.h"
 
-@interface CommViewController : UIViewController <UITextFieldDelegate, TTSlidingPagesDataSource> {
+@interface CommViewController : UIViewController <UITextFieldDelegate, TTSlidingPagesDataSource, PullableViewDelegate> {
 
 	__weak IBOutlet UIView *transmitContainerView;
 	__weak IBOutlet UITextField *transmitTextField;
@@ -21,7 +22,6 @@
 
 }
 
-- (IBAction)showHide;
 - (void)mentionUser:(User *)user;
 - (IBAction)transmit;
 

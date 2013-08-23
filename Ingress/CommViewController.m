@@ -12,8 +12,6 @@
 
 @implementation CommViewController {
 	
-	BOOL hidden;
-	
 	TTScrollSlidingPagesController *slider;
 
 	CommTableViewController *allTableView;
@@ -23,8 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-	hidden = YES;
 
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 
@@ -61,14 +57,19 @@
 	transmitButton.titleLabel.font = [UIFont fontWithName:[[[UILabel appearance] font] fontName] size:15];
 	showHideButton.titleLabel.font = [UIFont fontWithName:[[[UILabel appearance] font] fontName] size:16];
 	
-	__weak typeof(self) weakSelf = self;
+//	__weak typeof(self) weakSelf = self;
+	
+	__weak PullableView *pullableView = (PullableView *)self.view;
+//	__weak typeof(transmitTextField) weakTransmitTextField = transmitTextField;
 	__weak typeof(transmitContainerView) weakTransmitContainerView = transmitContainerView;
 	
 	[self.view setKeyboardTriggerOffset:32];
 	[self.view addKeyboardPanningWithActionHandler:^(CGRect keyboardFrameInView) {
 		CGRect transmitContainerViewFrame = weakTransmitContainerView.frame;
-		if (keyboardFrameInView.origin.y > weakSelf.view.frame.size.height) {
-			transmitContainerViewFrame.origin.y = weakSelf.view.frame.size.height - transmitContainerViewFrame.size.height;
+//		if (keyboardFrameInView.origin.y > weakSelf.view.frame.size.height) {
+//			transmitContainerViewFrame.origin.y = weakSelf.view.frame.size.height - transmitContainerViewFrame.size.height;
+		if (!pullableView.opened) {
+			transmitContainerViewFrame.origin.y = pullableView.frame.size.height - transmitContainerViewFrame.size.height;
 		} else {
 			transmitContainerViewFrame.origin.y = keyboardFrameInView.origin.y - transmitContainerViewFrame.size.height;
 		}
@@ -81,6 +82,17 @@
 	[super viewWillAppear:animated];
 
 	[[[GAI sharedInstance] defaultTracker] sendView:@"Comm Screen"];
+}
+
+- (void)viewWillLayoutSubviews {
+	
+	__weak PullableView *pullableView = (PullableView *)self.view;
+	pullableView.delegate = self;
+	pullableView.openedCenter = CGPointMake(pullableView.center.x, self.view.superview.frame.size.height-197);
+    pullableView.closedCenter = CGPointMake(pullableView.center.x, self.view.superview.frame.size.height+166);
+    pullableView.center = pullableView.closedCenter;
+	pullableView.handleView.frame = showHideButton.frame;
+	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,30 +133,6 @@
 }
 
 #pragma mark - IBActions
-
-- (IBAction)showHide {
-
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:DeviceSoundToggleEffects]) {
-        [[SoundManager sharedManager] playSound:@"Sound/sfx_ui_success.aif"];
-    }
-
-	[UIView animateWithDuration:.3 animations:^{
-		CGFloat superViewHeight = self.view.superview.frame.size.height-20;
-		CGRect frame = self.view.frame;
-		if (hidden) {
-			frame.origin.y = superViewHeight-373;
-			[allTableView refresh];
-			[factionTableView refresh];
-		} else {
-			frame.origin.y = superViewHeight-12;
-			[transmitTextField resignFirstResponder];
-		}
-		self.view.frame = frame;
-	} completion:^(BOOL finished) {
-		hidden = !hidden;
-	}];
-
-}
 
 - (void)mentionUser:(User *)user {
 	NSString *mentionToken = [NSString stringWithFormat:@"@%@", user.nickname];
@@ -196,6 +184,25 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[self transmit];
 	return NO;
+}
+
+#pragma mark - PullableViewDelegate
+
+- (void)pullableView:(PullableView *)pView didChangeState:(BOOL)opened {
+
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:DeviceSoundToggleEffects]) {
+        [[SoundManager sharedManager] playSound:@"Sound/sfx_ui_success.aif"];
+    }
+
+	if (opened) {
+		[allTableView refresh];
+		[factionTableView refresh];
+	} else {
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(NSEC_PER_MSEC)), dispatch_get_main_queue(), ^(void){
+			[transmitTextField resignFirstResponder];
+		});
+	}
+	
 }
 
 @end

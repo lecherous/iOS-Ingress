@@ -36,6 +36,7 @@ typedef enum {
 typedef enum {
 	ItemTypeResonator,
 	ItemTypeXMP,
+	ItemTypeUltraStrike,
 	ItemTypePortalShield,
 	ItemTypePowerCube,
 	ItemTypeFlipCard,

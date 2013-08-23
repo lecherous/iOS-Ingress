@@ -21,6 +21,7 @@
 #import "DeployedResonator.h"
 #import "Item.h"
 #import "XMP.h"
+#import "UltraStrike.h"
 #import "Media.h"
 #import "Portal.h"
 #import "User.h"

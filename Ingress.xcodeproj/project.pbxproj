@@ -193,6 +193,8 @@
 		FAAF378317610D63009BD67C /* turret@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAF377F17610D63009BD67C /* turret@2x.png */; };
 		FAB5A2CD16AA165D00176C34 /* ChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB5A2CC16AA165D00176C34 /* ChooserViewController.m */; };
 		FAB7BA261779D96B0047C7C0 /* UIControl+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB7BA251779D96B0047C7C0 /* UIControl+Blocks.m */; };
+		FABB0CE517AB007D00100185 /* ultraStrike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FABB0CE417AB007D00100185 /* ultraStrike@2x.png */; };
+		FABB0CE817AB0C6700100185 /* UltraStrike.m in Sources */ = {isa = PBXBuildFile; fileRef = FABB0CE717AB0C6700100185 /* UltraStrike.m */; };
 		FAC23D7716B16F31000C17DD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC23D7616B16F31000C17DD /* CoreData.framework */; };
 		FAC23D7A16B16F44000C17DD /* Ingress.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC23D7816B16F44000C17DD /* Ingress.xcdatamodeld */; };
 		FAC23E4F16B2E3A9000C17DD /* MKPolyline+PortalLink.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC23E4E16B2E3A8000C17DD /* MKPolyline+PortalLink.m */; };
@@ -222,6 +224,7 @@
 		FAC475C7172DB8B100AAFFC0 /* S2Geometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAC475C6172DB8B100AAFFC0 /* S2Geometry.mm */; };
 		FAC6BBAE171B080900AA0600 /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC6BBAD171B080900AA0600 /* ResourcesViewController.m */; };
 		FAC6BBB1171B0FFF00AA0600 /* ResourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC6BBB0171B0FFF00AA0600 /* ResourceCell.m */; };
+		FAC8C7A8179891D300D2E08F /* PullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC8C7A7179891D300D2E08F /* PullableView.m */; };
 		FACD502316A441400077837F /* PortalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD502216A441400077837F /* PortalDetailViewController.m */; };
 		FACEE6171737E9D3006A9912 /* NSShadow+Initilalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FACEE6161737E9D3006A9912 /* NSShadow+Initilalizer.m */; };
 		FACF89E116BBFD410071A03D /* GUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF89E016BBFD410071A03D /* GUIButton.m */; };
@@ -389,6 +392,7 @@
 		FA3FC31217369E4D009CD94A /* green_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green_bg@2x.png"; sourceTree = "<group>"; };
 		FA47817D16AC8FE00041FDFB /* enl_res_energy_fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enl_res_energy_fill@2x.png"; sourceTree = "<group>"; };
 		FA47817E16AC8FE00041FDFB /* hum_res_energy_fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hum_res_energy_fill@2x.png"; sourceTree = "<group>"; };
+		FA4CCD92179DDD2600DF5BE4 /* Ingress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ingress.entitlements; sourceTree = "<group>"; };
 		FA4D43AB16A8335500B98C1F /* shield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shield@2x.png"; sourceTree = "<group>"; };
 		FA4D43AE16A8386A00B98C1F /* innerwheel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "innerwheel@2x.png"; sourceTree = "<group>"; };
 		FA4D43AF16A8386A00B98C1F /* outerwheel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "outerwheel@2x.png"; sourceTree = "<group>"; };
@@ -590,6 +594,9 @@
 		FAB5A2CC16AA165D00176C34 /* ChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooserViewController.m; sourceTree = "<group>"; };
 		FAB7BA241779D96B0047C7C0 /* UIControl+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Blocks.h"; sourceTree = "<group>"; };
 		FAB7BA251779D96B0047C7C0 /* UIControl+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Blocks.m"; sourceTree = "<group>"; };
+		FABB0CE417AB007D00100185 /* ultraStrike@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ultraStrike@2x.png"; sourceTree = "<group>"; };
+		FABB0CE617AB0C6700100185 /* UltraStrike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UltraStrike.h; path = CoreData/UltraStrike.h; sourceTree = "<group>"; };
+		FABB0CE717AB0C6700100185 /* UltraStrike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UltraStrike.m; path = CoreData/UltraStrike.m; sourceTree = "<group>"; };
 		FAC23D6F16B16EB6000C17DD /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
 		FAC23D7616B16F31000C17DD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FAC23D7916B16F44000C17DD /* Ingress.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ingress.xcdatamodel; sourceTree = "<group>"; };
@@ -686,6 +693,8 @@
 		FAC6BBAD171B080900AA0600 /* ResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
 		FAC6BBAF171B0FFE00AA0600 /* ResourceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceCell.h; sourceTree = "<group>"; };
 		FAC6BBB0171B0FFF00AA0600 /* ResourceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceCell.m; sourceTree = "<group>"; };
+		FAC8C7A6179891D300D2E08F /* PullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullableView.h; sourceTree = "<group>"; };
+		FAC8C7A7179891D300D2E08F /* PullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullableView.m; sourceTree = "<group>"; };
 		FACD502116A441400077837F /* PortalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortalDetailViewController.h; sourceTree = "<group>"; };
 		FACD502216A441400077837F /* PortalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortalDetailViewController.m; sourceTree = "<group>"; };
 		FACEE6151737E9D3006A9912 /* NSShadow+Initilalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSShadow+Initilalizer.h"; path = "NSShadow+Initializer/NSShadow+Initilalizer.h"; sourceTree = "<group>"; };
@@ -1123,6 +1132,7 @@
 				FAADEEBA17821B35003435DC /* opsButton@2x.png */,
 				FAADEEBB17821B35003435DC /* opsButtonSelected@2x.png */,
 				FA325D641780A82300FDC5A5 /* discovery_location@2x.png */,
+				FABB0CE417AB007D00100185 /* ultraStrike@2x.png */,
 				FAAF377C17610D63009BD67C /* force_amp@2x.png */,
 				FAAF377D17610D63009BD67C /* heatsink@2x.png */,
 				FAAF377E17610D63009BD67C /* multihack@2x.png */,
@@ -1568,6 +1578,8 @@
 				FADC99391760ECD2009C497A /* DeployedResonator.m */,
 				FADC993E1760ECD2009C497A /* XMP.h */,
 				FADC993F1760ECD2009C497A /* XMP.m */,
+				FABB0CE617AB0C6700100185 /* UltraStrike.h */,
+				FABB0CE717AB0C6700100185 /* UltraStrike.m */,
 				FADC993B1760ECD2009C497A /* ForceAmp.h */,
 				FADC993C1760ECD2009C497A /* ForceAmp.m */,
 				FADC99351760ECD2009C497A /* Heatsink.h */,
@@ -1725,6 +1737,15 @@
 			path = math;
 			sourceTree = "<group>";
 		};
+		FAC8C7A5179891D300D2E08F /* PullableView */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8C7A6179891D300D2E08F /* PullableView.h */,
+				FAC8C7A7179891D300D2E08F /* PullableView.m */,
+			);
+			path = PullableView;
+			sourceTree = "<group>";
+		};
 		FACD4FFC16A428A80077837F /* marker_images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1821,6 +1842,7 @@
 		FAE6AC7616A0E27B0082BBB5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FAC8C7A5179891D300D2E08F /* PullableView */,
 				FA849E241797EBDC00F16A7A /* Crackify */,
 				FA325D661781A8D300FDC5A5 /* BorderedTextField */,
 				FA5826AC177A2F2300BF1FD7 /* QuickActionsMenu */,
@@ -1957,6 +1979,7 @@
 		FAEA5842169C7E7500E2F502 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA4CCD92179DDD2600DF5BE4 /* Ingress.entitlements */,
 				FAEA5843169C7E7500E2F502 /* Ingress-Info.plist */,
 				FAEA5844169C7E7500E2F502 /* InfoPlist.strings */,
 				FAEA5847169C7E7500E2F502 /* main.m */,
@@ -2184,6 +2207,7 @@
 				FAAF378317610D63009BD67C /* turret@2x.png in Resources */,
 				FA325D651780A82300FDC5A5 /* discovery_location@2x.png in Resources */,
 				FA6C96C4178B217E0082C7EC /* compass_ring@2x.png in Resources */,
+				FABB0CE517AB007D00100185 /* ultraStrike@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2346,6 +2370,8 @@
 				FA325D601780920800FDC5A5 /* NewPortalViewController.m in Sources */,
 				FA325D631780921400FDC5A5 /* NewPortalLocationViewController.m in Sources */,
 				FA325D691781A8EA00FDC5A5 /* BorderedTextField.m in Sources */,
+				FAC8C7A8179891D300D2E08F /* PullableView.m in Sources */,
+				FABB0CE817AB0C6700100185 /* UltraStrike.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2434,6 +2460,7 @@
 		FAEA585F169C7E7500E2F502 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Ingress/Ingress.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2464,6 +2491,7 @@
 		FAEA5860169C7E7500E2F502 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Ingress/Ingress.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
